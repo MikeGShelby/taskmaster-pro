@@ -13,7 +13,9 @@
 <body>
 
   <div class="row min-vh-100 no-gutters">
-    <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
+
+    <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-auto">
+
       <h1 class="text-center">Taskmaster Pro Edition</h1>
       <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">Add
         Task</button>
@@ -22,26 +24,33 @@
         excepturi aut non
         laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis iste?
       </p>
+
     </header>
+
     <main class="col-12 col-lg-9">
       <div class="m-5">
         <h2>To Do</h2>
         <ul id="list-toDo" class="list-group"> </ul>
       </div>
     </main>
+
   </div>
 
   <!-- Modal -->
   <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
     aria-hidden="true">
+
     <div class="modal-dialog modal-dialog-centered" role="document">
+
       <div class="modal-content">
+
         <div class="modal-header">
           <h5 class="modal-title" id="task-form-modal">Add New Task</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
         <div class="modal-body">
           <form>
             <div class="form-group">
@@ -54,10 +63,12 @@
             </div>
           </form>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save Task</button>
         </div>
+
       </div>
     </div>
   </div>

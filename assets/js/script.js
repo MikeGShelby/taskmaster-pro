@@ -1,7 +1,7 @@
 var tasks = {};
 
 var createTask = function(taskText, taskDate, taskList) {
-  // create elements that make up a task item
+  // STEP 1: create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
   var taskSpan = $("<span>")
     .addClass("badge badge-primary badge-pill")
@@ -10,18 +10,18 @@ var createTask = function(taskText, taskDate, taskList) {
     .addClass("m-1")
     .text(taskText);
 
-  // append span and p element to parent li
+  // STEP 2: append span and p element to parent li
   taskLi.append(taskSpan, taskP);
 
 
-  // append to ul list on the page
+  // STEP 3:append to ul list on the page
   $("#list-" + taskList).append(taskLi);
 };
 
 var loadTasks = function() {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
-  // if nothing in localStorage, create a new object to track all task status arrays
+  // STEP 1: if nothing in localStorage, create a new object to track all task status arrays
   if (!tasks) {
     tasks = {
       toDo: [],
@@ -31,10 +31,10 @@ var loadTasks = function() {
     };
   }
 
-  // loop over object properties
+  // STEP 2.0: loop over object properties
   $.each(tasks, function(list, arr) {
     console.log(list, arr);
-    // then loop over sub-array
+    // STEP 2.1: then loop over sub-array
     arr.forEach(function(task) {
       createTask(task.text, task.date, list);
     });
